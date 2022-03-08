@@ -1,0 +1,9 @@
+inicio_programa nombre_del_programa
+    usar "PICXX";
+    inicio_var
+        //Bloque de declaracion de variables
+    fin_var
+    inicio_bloque
+        //Bloque de codigo
+    fin_bloque
+fin_programa
