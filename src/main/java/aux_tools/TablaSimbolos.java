@@ -71,6 +71,31 @@ public class TablaSimbolos {
         }
         return false;
     }
+    
+    public Boolean buscarTipoDato(String t) {
+        if(this.ListaTokens.isEmpty()){
+            return false;
+        }
+        for (Simbolo tokens : this.ListaTokens) {
+            if (tokens.getLexema().equals(t) && !tokens.getTipo().equals("")) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public Boolean buscarValor(String t) {
+        if(this.ListaTokens.isEmpty()){
+            return false;
+        }
+        for (Simbolo tokens : this.ListaTokens) {
+            if (tokens.getLexema().equals(t) && tokens.valor != null) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public Boolean buscarToken(String t) {
         if(this.ListaTokens.isEmpty()){
             return false;
