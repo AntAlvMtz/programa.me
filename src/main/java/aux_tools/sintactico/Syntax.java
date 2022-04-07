@@ -2606,11 +2606,11 @@ class CUP$Syntax$actions {
 		System.out.println("Se ha encontrado ASIGNACION");
               CUP$Syntax$result = parser.getSymbolFactory().newSymbol("ASIGNACION",8, ((java_cup.runtime.Symbol)CUP$Syntax$stack.elementAt(CUP$Syntax$top-2)), ((java_cup.runtime.Symbol)CUP$Syntax$stack.peek()), RESULT);
               /**ERROR**/
-              /*Object id = (Object)((java_cup.runtime.Symbol) CUP$Syntax$stack.elementAt(CUP$Syntax$top-2)).value;
+              Object id = (Object)((java_cup.runtime.Symbol) CUP$Syntax$stack.elementAt(CUP$Syntax$top-2)).value;
               int tdright = ((java_cup.runtime.Symbol)CUP$Syntax$stack.elementAt(CUP$Syntax$top-1)).right;
               if(!editor.tablaSimbolos_id.buscarTipoDato(id.toString())){
                    editor.ERRORES_SEM.add(new ErroresSemanticos(tdright,"Error semántico en la línea "+(tdright+1)+" --> El identificador "+id.toString()+" no está definido"));
-              }*/
+              }
           }
           return CUP$Syntax$result;
 
@@ -2690,7 +2690,14 @@ class CUP$Syntax$actions {
           case 75: // EXPRESION ::= EXPRESION Suma TERMINO 
             {
               Object RESULT =null;
-
+              /**ERROR**/
+              /*Object id = (Object)((java_cup.runtime.Symbol) CUP$Syntax$stack.elementAt(CUP$Syntax$top-2)).value;
+              int tdright = ((java_cup.runtime.Symbol)CUP$Syntax$stack.elementAt(CUP$Syntax$top-1)).right;
+              
+              if(!editor.tablaSimbolos_id.buscarTipoDato(id.toString())){
+                   editor.ERRORES_SEM.add(new ErroresSemanticos(tdright,"Error semántico en la línea "+(tdright+1)+" --> El identificador "+id.toString()+" no está definido"));
+              }*/
+              
               CUP$Syntax$result = parser.getSymbolFactory().newSymbol("EXPRESION",9, ((java_cup.runtime.Symbol)CUP$Syntax$stack.elementAt(CUP$Syntax$top-2)), ((java_cup.runtime.Symbol)CUP$Syntax$stack.peek()), RESULT);
             }
           return CUP$Syntax$result;
@@ -2773,12 +2780,7 @@ class CUP$Syntax$actions {
               Object RESULT =null;
 
               CUP$Syntax$result = parser.getSymbolFactory().newSymbol("FACTOR",12, ((java_cup.runtime.Symbol)CUP$Syntax$stack.peek()), ((java_cup.runtime.Symbol)CUP$Syntax$stack.peek()), RESULT);
-              /**ERROR**/
-              Object id = (Object)((java_cup.runtime.Symbol) CUP$Syntax$stack.elementAt(CUP$Syntax$top-2)).value;
-              int tdright = ((java_cup.runtime.Symbol)CUP$Syntax$stack.elementAt(CUP$Syntax$top-1)).right;
-              if(!editor.tablaSimbolos_id.buscarTipoDato(id.toString())){
-                   editor.ERRORES_SEM.add(new ErroresSemanticos(tdright,"Error semántico en la línea "+(tdright+1)+" --> El identificador "+id.toString()+" no está definido"));
-              }
+              
             }
           return CUP$Syntax$result;
 

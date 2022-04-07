@@ -6,10 +6,10 @@ inicio_programa fe43
 		definir led1 como led;
 		definir led2 como led;
 		definir f como texto;
-		definir a como entero;
+		//definir C como entero;
 	fin_var
 	inicio_bloque
-		C=x+(3+s);
-		motor1.girar.derecha;
+
+		motor4.1l.s1;
 	fin_bloque;
 fin_programa
