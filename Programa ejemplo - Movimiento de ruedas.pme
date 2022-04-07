@@ -1,0 +1,15 @@
+inicio_programa fe43
+	usar "PIC18";
+	inicio_var
+	  definir motor1 como motor;
+		definir motor2 como motor;
+		definir led1 como led;
+		definir led2 como led;
+		definir f como texto;
+		definir a como entero;
+	fin_var
+	inicio_bloque
+		C=x+(3+s);
+		motor1.girar.derecha;
+	fin_bloque;
+fin_programa
